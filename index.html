@@ -193,6 +193,7 @@
         }
 
         .dash-btn {
+            display: block;
             background: rgba(255, 255, 255, 0.07);
             border: 1px solid rgba(255, 255, 255, 0.15);
             padding: 20px 0;
@@ -200,6 +201,7 @@
             color: #fff;
             font-size: 1.4rem;
             font-weight: 600;
+            text-decoration: none;
             cursor: pointer;
             transition: all 0.3s ease;
         }
@@ -227,7 +229,7 @@
             padding: 12px;
             border-radius: 8px;
             color: #00adb5;
-            font-size: 0.95krem;
+            font-size: 0.95rem;
             border: 1px dashed rgba(0, 173, 181, 0.3);
         }
 
@@ -274,16 +276,16 @@
         </div>
 
         <div class="button-grid">
-            <button class="dash-btn" onclick="handleDashClick(1)">1 <i>Analytics</i></button>
-            <button class="dash-btn" onclick="handleDashClick(2)">2 <i>Users</i></button>
-            <button class="dash-btn" onclick="handleDashClick(3)">3 <i>Security</i></button>
-            <button class="dash-btn" onclick="handleDashClick(4)">4 <i>Database</i></button>
-            <button class="dash-btn" onclick="handleDashClick(5)">5 <i>Logs</i></button>
-            <button class="dash-btn" onclick="handleDashClick(6)">6 <i>Settings</i></button>
+            <a href="https://google.com" target="_blank" class="dash-btn" onclick="handleDashClick(1)">1 <i>Analytics</i></a>
+            <a href="https://github.com" target="_blank" class="dash-btn" onclick="handleDashClick(2)">2 <i>Users</i></a>
+            <a href="#" class="dash-btn" onclick="handleDashClick(3)">3 <i>Security</i></a>
+            <a href="#" class="dash-btn" onclick="handleDashClick(4)">4 <i>Database</i></a>
+            <a href="#" class="dash-btn" onclick="handleDashClick(5)">5 <i>Logs</i></a>
+            <a href="#" class="dash-btn" onclick="handleDashClick(6)">6 <i>Settings</i></a>
         </div>
 
         <div class="action-output" id="actionOutput">
-            Select a module button above to run action.
+            Select a module button above to run action or open link.
         </div>
     </div>
 
@@ -342,15 +344,15 @@
                     loginScreen.classList.remove('hidden');
                 }, 50);
             }, 400);
-            document.getElementById('actionOutput').innerText = "Select a module button above to run action.";
+            document.getElementById('actionOutput').innerText = "Select a module button above to run action or open link.";
         });
 
         // Dashboard Interactive Button Actions
         function handleDashClick(num) {
             const output = document.getElementById('actionOutput');
             const messages = {
-                1: "📊 Analytics module loaded successfully. Traffic looks steady.",
-                2: "👥 User management portal active. 1,420 active accounts found.",
+                1: "📊 Opening Analytics (External Link)...",
+                2: "👥 Opening Users Portal (External Link)...",
                 3: "🛡️ Security firewall is fully operational. No threats detected.",
                 4: "🗄️ Database status: Connected (Latency: 14ms).",
                 5: "📜 System audit logs updated. No critical errors recorded.",
